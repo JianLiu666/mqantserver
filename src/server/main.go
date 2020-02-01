@@ -1,27 +1,29 @@
 package main
 
 import (
+	"server/chat"
+	"server/gate"
+	"server/helloworld"
+	"server/hitball"
+	"server/login"
+	"server/user"
+	"server/xaxb"
+	"webapp"
+
 	"github.com/liangdas/mqant"
 	"github.com/liangdas/mqant/module/modules"
 	"github.com/nats-io/nats.go"
 
 	//"github.com/liangdas/mqant-modules/tracing"
 	"fmt"
-	"github.com/liangdas/mqant/module"
-	"github.com/liangdas/mqant/registry"
-	"github.com/liangdas/mqant/selector"
-	"github.com/liangdas/mqantserver/server/chat"
-	"github.com/liangdas/mqantserver/server/gate"
-	"github.com/liangdas/mqantserver/server/helloworld"
-	"github.com/liangdas/mqantserver/server/hitball"
-	"github.com/liangdas/mqantserver/server/login"
-	"github.com/liangdas/mqantserver/server/user"
-	"github.com/liangdas/mqantserver/server/xaxb"
-	"github.com/liangdas/mqantserver/webapp"
 	"math/rand"
 	"net/http"
 	_ "net/http/pprof"
 	"sync"
+
+	"github.com/liangdas/mqant/module"
+	"github.com/liangdas/mqant/registry"
+	"github.com/liangdas/mqant/selector"
 )
 
 func main() {
@@ -34,7 +36,7 @@ func main() {
 
 	}
 	app := mqant.CreateApp(
-		module.Debug(true),//只有是在调试模式下才会在控制台打印日志, 非调试模式下只在日志文件中输出日志
+		module.Debug(true), //只有是在调试模式下才会在控制台打印日志, 非调试模式下只在日志文件中输出日志
 		module.Nats(nc),
 		module.Registry(rs),
 	)

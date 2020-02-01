@@ -16,7 +16,7 @@ package main
 import (
 	"fmt"
 	"github.com/liangdas/armyant/task"
-	"github.com/liangdas/mqantserver/robot/xaba"
+	"../robot/xaba"
 	"os"
 	"os/signal"
 )

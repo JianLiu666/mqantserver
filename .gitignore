@@ -1,15 +1,19 @@
 # Compiled Object files, Static and Dynamic libs (Shared Objects)
 .idea
-bin/logs
-bin/sslkey
-bin/server
-bin/client
+*/bin/logs
+*/bin/sslkey
+*/bin/server
+*/bin/client
+
 #src/hitball
 #src/server/hitball
+
 src/gopkg.in
 src/github.com/quick-know-master
 pkg
 node_modules
+*.bat
+*.exe
 *.o
 *.a
 *.so

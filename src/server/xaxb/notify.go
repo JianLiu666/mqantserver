@@ -15,7 +15,8 @@ package xaxb
 
 import (
 	"encoding/json"
-	"github.com/liangdas/mqantserver/server/xaxb/objects"
+
+	"server/xaxb/objects"
 )
 
 /**
